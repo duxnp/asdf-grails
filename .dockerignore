@@ -1,0 +1,9 @@
+build/
+.gradle/
+*.war
+*.log
+*.class
+*.iml
+.idea/
+.DS_Store
+

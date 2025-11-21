@@ -1,0 +1,22 @@
+# Use an official OpenJDK runtime as a parent image
+FROM eclipse-temurin:11
+
+# Set environment variables
+ENV GRAILS_ENV=test
+ENV GRADLE_OPTS="-Dorg.gradle.vfs.watch=false"
+
+# Set the working directory
+WORKDIR /app
+
+# Copy Gradle wrapper and project files
+COPY . /app
+
+# Make gradlew executable
+RUN chmod +x gradlew
+
+# Download dependencies and build test classes
+RUN ./gradlew testClasses
+
+# Run unit tests
+# CMD ["./gradlew", "test"]
+CMD ["./gradlew", "check"]
