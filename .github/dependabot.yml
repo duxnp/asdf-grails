@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    rebase-strategy: "auto"
+    open-pull-requests-limit: 10
+    allow:
+      - dependency-type: "direct"
+    groups:
+      minor-patch:
+        applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
+      major:
+        applies-to: version-updates
+        update-types:
+          - "major"

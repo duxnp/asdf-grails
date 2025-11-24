@@ -21,7 +21,7 @@
             <g:each in="${fooList}" var="foo">
                 <tr>
                     <td>${foo.id}</td>
-                    <td>${foo.name}</td>
+                    <td data-testid="name">${foo.name}</td>
                     <td>${foo.age}</td>
                     <td>${foo.active}</td>
                     <td>${foo.dateCreated}</td>
