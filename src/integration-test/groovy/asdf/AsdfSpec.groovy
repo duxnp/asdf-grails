@@ -36,6 +36,6 @@ class AsdfSpec extends GebSpec {
 
         then: "The third data-testid=\"name\" cell contains 'Charlie'"
         nameCells.size() >= 2
-        nameCells[1].text() == 'Charlie'
+        nameCells[2].text() == 'Charlie'
     }
 }
