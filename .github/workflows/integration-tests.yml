@@ -20,5 +20,5 @@ jobs:
       - name: Grant execute permission for Gradle wrapper
         run: chmod +x ./gradlew
       - name: Run integration tests
-        run: ./gradlew integrationTest
+        run: ./gradlew integrationTest -Dgeb.env=chromeHeadless
 
