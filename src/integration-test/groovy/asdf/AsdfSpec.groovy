@@ -28,4 +28,14 @@ class AsdfSpec extends GebSpec {
             nameCells.size() >= 2
             nameCells[1].text() == 'Bob'
     }
+
+    void "test third  data-testid name is Foo"() {
+        when: "The home page is visited"
+        go '/'
+        def nameCells = $("td[data-testid='name']")
+
+        then: "The third data-testid=\"name\" cell contains 'Foo'"
+        nameCells.size() >= 2
+        nameCells[1].text() == 'Foo'
+    }
 }
