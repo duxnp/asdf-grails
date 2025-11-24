@@ -14,7 +14,7 @@ plugins {
     id "com.github.erdi.webdriver-binaries" version "3.2" // Removed for Selenium Manager
     id "war"
     id "idea"
-    id "com.bertramlabs.asset-pipeline" version "4.5.1"
+    id "com.bertramlabs.asset-pipeline" version "5.0.9"
     id "application"
     id "eclipse"
 }
@@ -62,10 +62,10 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-validation"
     compileOnly "io.micronaut:micronaut-inject-groovy"
     console "org.grails:grails-console"
-    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:4.5.1"
+    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:5.0.9"
     runtimeOnly "com.h2database:h2"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
-    runtimeOnly "org.fusesource.jansi:jansi:1.18"
+    runtimeOnly "org.fusesource.jansi:jansi:2.4.2"
     testImplementation "io.micronaut:micronaut-inject-groovy"
     testImplementation "org.grails:grails-gorm-testing-support"
     testImplementation "org.grails:grails-web-testing-support"
