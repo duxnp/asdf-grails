@@ -11,7 +11,7 @@ buildscript {
 
 plugins {
     id "groovy"
-    // id "com.github.erdi.webdriver-binaries" version "3.2" // Removed for Selenium Manager
+    id "com.github.erdi.webdriver-binaries" version "3.2" // Removed for Selenium Manager
     id "war"
     id "idea"
     id "com.bertramlabs.asset-pipeline" version "4.5.1"
@@ -91,15 +91,14 @@ tasks.withType(Test) {
     useJUnitPlatform()
     systemProperty "geb.env", System.getProperty('geb.env')
     systemProperty "geb.build.reportsDir", reporting.file("geb/integrationTest")
-    // Remove explicit driver paths to let Selenium Manager handle drivers
-    // systemProperty 'webdriver.chrome.driver', "${System.getenv('CHROMEWEBDRIVER')}/chromedriver"
-    // systemProperty 'webdriver.gecko.driver', "${System.getenv('GECKOWEBDRIVER')}/geckodriver"
+    systemProperty 'webdriver.chrome.driver', "${System.getenv('CHROMEWEBDRIVER')}/chromedriver"
+    systemProperty 'webdriver.gecko.driver', "${System.getenv('GECKOWEBDRIVER')}/geckodriver"
 }
-// webdriverBinaries {
-//     chromedriver '141.0.7390.54'
-//     geckodriver '0.36.0'
-//     edgedriver '141.0.3537.57'
-// }
+webdriverBinaries {
+    chromedriver '141.0.7390.54'
+    geckodriver '0.36.0'
+    edgedriver '141.0.3537.57'
+}
 assets {
     minifyJs = true
     minifyCss = true
