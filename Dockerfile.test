@@ -19,4 +19,4 @@ RUN ./gradlew testClasses
 
 # Run unit tests
 # CMD ["./gradlew", "test"]
-CMD ["./gradlew", "check"]
+CMD ["./gradlew", "integrationTest", "-Dgeb.env=chromeHeadless"]

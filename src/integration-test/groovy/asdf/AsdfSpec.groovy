@@ -16,7 +16,7 @@ class AsdfSpec extends GebSpec {
             go '/'
 
         then:"The title is correct"
-            title == "Welcome to Grailz"
+            title == "Welcome to Grails"
     }
 
 }

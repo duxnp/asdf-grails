@@ -21,3 +21,12 @@
 
 - [https://www.gebish.org/manual/current/](https://www.gebish.org/manual/current/)
 
+
+
+docker build -f Dockerfile.test -t my-grails-tests .
+
+docker run my-grails-tests
+
+docker build --platform=linux/amd64 -f Dockerfile.test -t my-grails-tests .
+
+docker run --platform=linux/amd64 my-grails-tests
