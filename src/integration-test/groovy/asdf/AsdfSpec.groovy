@@ -19,4 +19,13 @@ class AsdfSpec extends GebSpec {
             title == "Welcome to Grails"
     }
 
+    void "test second data-testid name is Bob"() {
+        when: "The home page is visited"
+            go '/'
+            def nameCells = $("td[data-testid='name']")
+
+        then: "The second data-testid=\"name\" cell contains 'Bob'"
+            nameCells.size() >= 2
+            nameCells[1].text() == 'Bob'
+    }
 }
