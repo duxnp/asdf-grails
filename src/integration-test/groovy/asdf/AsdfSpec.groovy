@@ -38,4 +38,12 @@ class AsdfSpec extends GebSpec {
         nameCells.size() >= 2
         nameCells[2].text() == 'Charlie'
     }
+
+    void "test alert button displays browser alert"() {
+        given: "The home page is visited and the alert button is clicked"
+        go '/'
+
+        expect: "A browser alert is displayed with the correct message"
+        withAlert { $("#alertButton").click() } != null
+    }
 }
