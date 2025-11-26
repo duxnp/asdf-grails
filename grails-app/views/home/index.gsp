@@ -33,5 +33,7 @@
     <g:else>
         <p>No Foo records found.</p>
     </g:else>
+
+    <button id="alertButton" onclick="alert('Hello from Grails!')">Show Alert</button>
 </body>
 </html>
